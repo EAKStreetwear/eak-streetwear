@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EAK Streetwear — Collection</title>
+  <meta name="description" content="EAK Streetwear — Lüks sokak giyimi. Sipariş için WhatsApp ile iletişime geç.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">EAK</div>
+        <div class="sub">STREETWEAR</div>
+      </div>
+      <nav class="nav">
+        <a href="#collection">Collection</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button id="cartBtn" class="cart-btn">Cart (<span id="cartCount">0</span>)</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Minimal. Elite. Street.</h1>
+        <p class="lead">EAK Streetwear — limited drops, premium fabrics.</p>
+        <a href="#collection" class="btn btn-ghost">Shop the Drop</a>
+      </div>
+    </section>
+
+    <section id="collection" class="collection container">
+      <h2>New Drop</h2>
+      <div id="products" class="products-grid">
+        <!-- products populated by app.js -->
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <div class="about-grid">
+        <div class="about-text">
+          <h3>About EAK</h3>
+          <p>Refined streetwear with premium attitude. Limited runs, carefully selected fabrics, clean silhouettes. For orders, use the WhatsApp checkout (fast & free).</p>
+        </div>
+        <div class="about-image">
+          <img src="images/look1.jpg" alt="EAK look">
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:hello@eakstreetwear.com">hello@eakstreetwear.com</a></p>
+      <p>WhatsApp: <a id="waLink" href="https://wa.me/905XXXXXXXXX" target="_blank">+90 5XX XXX XX XX</a> (tıklayın, sipariş mesajı hazır)</p>
+      <p>Instagram: <a href="https://instagram.com" target="_blank">@eakstreetwear</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> EAK Streetwear — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cart modal -->
+  <div id="cartModal" class="cart-modal hidden">
+    <div class="cart-panel">
+      <button id="closeCart" class="close">×</button>
+      <h3>Your Cart</h3>
+      <div id="cartItems"></div>
+      <div class="cart-footer">
+        <div class="total">Total: <strong id="cartTotal">0.00 ₺</strong></div>
+        <div class="checkout-actions">
+          <button id="checkoutWhats" class="btn">Checkout via WhatsApp</button>
+          <button id="checkoutEmail" class="btn btn-ghost">Checkout via Email</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

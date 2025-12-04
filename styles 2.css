@@ -1,0 +1,74 @@
+:root{
+  --bg:#050505;
+  --muted:#bdbdbd;
+  --accent:#ffffff;
+  --container:1100px;
+  --gap:24px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--accent);
+  font-family: 'Montserrat', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* layout */
+.container{max-width:var(--container);margin:0 auto;padding:0 20px}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.brand{display:flex;flex-direction:column;align-items:flex-start}
+.logo{font-family:'Playfair Display', serif;font-size:34px;letter-spacing:2px}
+.sub{font-size:11px;letter-spacing:6px;color:var(--muted);margin-top:2px}
+
+/* nav */
+.nav a{color:var(--muted);text-decoration:none;margin-right:18px;font-size:14px}
+.cart-btn{background:transparent;border:1px solid rgba(255,255,255,0.08);padding:8px 12px;border-radius:4px;color:var(--accent);cursor:pointer}
+
+/* hero */
+.hero{display:flex;align-items:center;justify-content:center;height:62vh;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent)}
+.hero-inner{text-align:center}
+.hero h1{font-family:'Playfair Display', serif;font-size:48px;margin:0 0 10px}
+.lead{color:var(--muted);margin-bottom:18px}
+.btn{padding:12px 20px;border-radius:6px;border:0;background:var(--accent);color:var(--bg);cursor:pointer}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.12);color:var(--accent)}
+
+/* collection */
+.collection{padding:48px 0}
+.collection h2{font-family:'Playfair Display',serif;margin-bottom:18px}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+
+/* product */
+.card{background:rgba(255,255,255,0.03);border-radius:8px;padding:14px;display:flex;flex-direction:column;align-items:center}
+.card img{width:100%;height:260px;object-fit:cover;border-radius:6px;margin-bottom:12px}
+.card h4{margin:0 0 8px;font-size:16px}
+.card .price{color:var(--muted);margin-bottom:12px}
+.card .add{background:transparent;border:1px solid rgba(255,255,255,0.08);padding:8px 10px;border-radius:6px;color:var(--accent);cursor:pointer}
+
+/* about */
+.about{padding:40px 0}
+.about-grid{display:grid;grid-template-columns:1fr 420px;gap:18px;align-items:center}
+.about-image img{width:100%;border-radius:6px;object-fit:cover}
+
+/* footer */
+.site-footer{border-top:1px solid rgba(255,255,255,0.04);padding:18px 0;margin-top:36px;color:var(--muted);text-align:center}
+
+/* cart modal */
+.cart-modal{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;z-index:40}
+.hidden{display:none}
+.cart-panel{background:#0b0b0b;padding:20px;border-radius:10px;min-width:320px;max-width:420px;color:var(--accent);position:relative}
+.close{background:transparent;border:0;color:var(--muted);font-size:24px;cursor:pointer;position:absolute;right:18px;top:18px}
+.cart-item{display:flex;gap:12px;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+.cart-item img{width:60px;height:60px;object-fit:cover;border-radius:6px}
+.cart-footer{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
+.checkout-actions{display:flex;gap:8px}
+
+/* responsive */
+@media (max-width:800px){
+  .about-grid{grid-template-columns:1fr;row-gap:12px}
+  .hero h1{font-size:32px}
+}
